@@ -6,6 +6,7 @@ import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Insets;
+import java.awt.Paint;
 import java.awt.RenderingHints;
 
 import javax.swing.AbstractButton;
@@ -40,22 +41,25 @@ public class MyButtonUI extends BasicButtonUI {
 		AbstractButton button = (AbstractButton) c;
 		ButtonModel buttonModel = button.getModel();
 
-		// Формой кнопки будет закруглённый прямоугольник
+		Paint backGround = null;
+		Paint border = null;
 
-		// Фон кнопки
-		g2d.setPaint(new GradientPaint(0, 0, Color.WHITE, 0, c.getHeight(),
-				new Color(200, 200, 200)));
-		// Закгругление необходимо делать больше, чем при отрисовке формы,
-		// иначе светлый фон будет просвечивать по краям
+		// якщо курсор знаходиться над компонентом
+		if (buttonModel.isRollover()) {
+			backGround = new Color(200, 200, 200);
+			border = Color.BLUE;
+		} else if (buttonModel.isPressed()) {
+			
+		} else {
+			backGround = new GradientPaint(0, 0, Color.WHITE, 0, c.getHeight(),
+					new Color(200, 200, 200));
+			border = Color.GRAY;
+		}
+
+		g2d.setPaint(backGround);
 		g2d.fillRoundRect(0, 0, c.getWidth(), c.getHeight(), 8, 8);
 
-		// Бордер кнопки
-		if (buttonModel.isRollover()) {
-			g2d.setPaint(Color.BLUE);
-		} else {
-			g2d.setPaint(Color.RED);
-		}
-		System.out.println(buttonModel.isRollover());
+		g2d.setPaint(border);
 		// Важно помнить, что форму необходимо делать на 1px меньше, чем
 		// ширина/высота компонента,
 		// иначе правый и нижний края фигуры вылезут за границу компонента и не
