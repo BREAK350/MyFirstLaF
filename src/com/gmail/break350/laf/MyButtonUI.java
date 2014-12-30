@@ -42,21 +42,20 @@ public class MyButtonUI extends BasicButtonUI {
 		ButtonModel buttonModel = button.getModel();
 
 		Paint backGround = null;
-		Paint border = null;
+		Paint border = new Color(0xc5c5c5);
 
-		Color from = Color.WHITE;
-		Color to = new Color(0xe6e6e6);
+		Color light = Color.WHITE;
+		Color middle = new Color(0xe6e6e6);
+		Color dark = new Color(0xc5c5c5);
 
 		// якщо курсор знаходиться над компонентом
 		if (buttonModel.isPressed()) {
-			backGround = new GradientPaint(0, 0, to, 0, c.getHeight(), from);
-			border = Color.BLUE;
+			backGround = new GradientPaint(0, 0, dark, 0, c.getHeight(), middle);
 		} else if (buttonModel.isRollover()) {
-			backGround = to;
-			border = Color.GRAY;
+			backGround = middle;
 		} else {
-			backGround = new GradientPaint(0, 0, from, 0, c.getHeight(), to);
-			border = Color.GRAY;
+			backGround = new GradientPaint(0, 0, light, 0, c.getHeight(),
+					middle);
 		}
 
 		g2d.setPaint(backGround);
