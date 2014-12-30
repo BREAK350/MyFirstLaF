@@ -28,7 +28,7 @@ public class MyButtonUI extends BasicButtonUI {
 		button.setOpaque(false);
 		button.setFocusable(true);
 		button.setMargin(new Insets(0, 0, 0, 0));
-		button.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
+		button.setBorder(BorderFactory.createEmptyBorder(4, 14, 4, 14));
 		button.setRolloverEnabled(true);
 		button.setCursor(new Cursor(Cursor.HAND_CURSOR));
 	}
@@ -50,7 +50,7 @@ public class MyButtonUI extends BasicButtonUI {
 
 		// якщо курсор знаходиться над компонентом
 		if (buttonModel.isPressed()) {
-			backGround = new GradientPaint(0, 0, dark, 0, c.getHeight(), middle);
+			backGround = new GradientPaint(0, 0, dark, 0, 14, middle);
 		} else if (buttonModel.isRollover()) {
 			backGround = middle;
 		} else {
