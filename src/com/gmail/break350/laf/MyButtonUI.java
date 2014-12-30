@@ -1,6 +1,7 @@
 package com.gmail.break350.laf;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -27,6 +28,7 @@ public class MyButtonUI extends BasicButtonUI {
 		button.setFocusable(true);
 		button.setMargin(new Insets(0, 0, 0, 0));
 		button.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
+		button.setCursor(new Cursor(Cursor.HAND_CURSOR));
 	}
 
 	public void paint(Graphics g, JComponent c) {
