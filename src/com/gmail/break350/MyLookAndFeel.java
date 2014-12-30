@@ -7,7 +7,7 @@ public class MyLookAndFeel extends BasicLookAndFeel {
 
 	@Override
 	public String getDescription() {
-		return null;
+		return "Cross-platform Java Look and Feel";
 	}
 
 	@Override
