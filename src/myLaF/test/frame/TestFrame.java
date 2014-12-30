@@ -11,6 +11,10 @@ public class TestFrame extends JFrame {
 		setVisible(true);
 	}
 
+	public void initComponents() {
+
+	}
+
 	public static void main(String[] args) {
 		new TestFrame();
 	}
