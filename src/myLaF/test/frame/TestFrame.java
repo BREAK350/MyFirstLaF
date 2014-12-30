@@ -2,6 +2,7 @@ package myLaF.test.frame;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -23,8 +24,11 @@ public class TestFrame extends JFrame {
 		JPanel content = new JPanel();
 		content.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(content);
-		JButton btn = new JButton("Button");
-		content.add(btn);
+
+		JLabel label = new JLabel("label");
+		content.add(label);
+		JButton button = new JButton("Button");
+		content.add(button);
 	}
 
 	public static void main(String[] args) {
