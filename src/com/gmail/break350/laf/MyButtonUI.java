@@ -48,11 +48,12 @@ public class MyButtonUI extends BasicButtonUI {
 		Color to = new Color(0xe6e6e6);
 
 		// якщо курсор знаходиться над компонентом
-		if (buttonModel.isRollover()) {
+		if (buttonModel.isPressed()) {
+			backGround = new GradientPaint(0, 0, to, 0, c.getHeight(), from);
+			border = Color.GRAY;
+		} else if (buttonModel.isRollover()) {
 			backGround = to;
-			border = Color.BLUE;
-		} else if (buttonModel.isPressed()) {
-
+			border = Color.GRAY;
 		} else {
 			backGround = new GradientPaint(0, 0, from, 0, c.getHeight(), to);
 			border = Color.GRAY;
@@ -69,11 +70,6 @@ public class MyButtonUI extends BasicButtonUI {
 		// К заливке это не относится, так как последняя колонка/строка пикселей
 		// игнорируется при заполнении
 		g2d.drawRoundRect(0, 0, c.getWidth() - 1, c.getHeight() - 1, 6, 6);
-
-		// Сдвиг отрисовки при нажатой кнопке
-		if (buttonModel.isPressed()) {
-			// g2d.translate(1, 1);
-		}
 
 		// Отрисовка текста и иконки изображения
 		super.paint(g, c);
