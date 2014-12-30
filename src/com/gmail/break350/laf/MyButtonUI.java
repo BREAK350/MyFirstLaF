@@ -49,7 +49,11 @@ public class MyButtonUI extends BasicButtonUI {
 		g2d.fillRoundRect(0, 0, c.getWidth(), c.getHeight(), 8, 8);
 
 		// Бордер кнопки
-		g2d.setPaint(Color.GRAY);
+		if (buttonModel.isRollover()) {
+			g2d.setPaint(Color.BLUE);
+		} else {
+			g2d.setPaint(Color.GRAY);
+		}
 		// Важно помнить, что форму необходимо делать на 1px меньше, чем
 		// ширина/высота компонента,
 		// иначе правый и нижний края фигуры вылезут за границу компонента и не
@@ -60,7 +64,7 @@ public class MyButtonUI extends BasicButtonUI {
 
 		// Сдвиг отрисовки при нажатой кнопке
 		if (buttonModel.isPressed()) {
-			g2d.translate(1, 1);
+			// g2d.translate(1, 1);
 		}
 
 		// Отрисовка текста и иконки изображения
