@@ -50,7 +50,7 @@ public class MyButtonUI extends BasicButtonUI {
 		// якщо курсор знаходиться над компонентом
 		if (buttonModel.isPressed()) {
 			backGround = new GradientPaint(0, 0, to, 0, c.getHeight(), from);
-			border = Color.GRAY;
+			border = Color.BLUE;
 		} else if (buttonModel.isRollover()) {
 			backGround = to;
 			border = Color.GRAY;
