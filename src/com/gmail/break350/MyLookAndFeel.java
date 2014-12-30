@@ -12,7 +12,7 @@ public class MyLookAndFeel extends BasicLookAndFeel {
 
 	@Override
 	public String getID() {
-		return null;
+		return getName();
 	}
 
 	@Override
