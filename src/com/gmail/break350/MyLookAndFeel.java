@@ -17,7 +17,7 @@ public class MyLookAndFeel extends BasicLookAndFeel {
 
 	@Override
 	public String getName() {
-		return null;
+		return "MyLookAndFeel";
 	}
 
 	@Override
