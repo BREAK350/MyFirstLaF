@@ -1,5 +1,6 @@
 package com.gmail.break350.laf;
 
+import javax.swing.UIDefaults;
 import javax.swing.plaf.basic.BasicLookAndFeel;
 
 public class MyLookAndFeel extends BasicLookAndFeel {
@@ -30,4 +31,9 @@ public class MyLookAndFeel extends BasicLookAndFeel {
 		return true;
 	}
 
+	@Override
+	protected void initClassDefaults(UIDefaults table) {
+		super.initClassDefaults(table);
+		table.put("ButtonUI", MyButtonUI.class.getCanonicalName());
+	}
 }
