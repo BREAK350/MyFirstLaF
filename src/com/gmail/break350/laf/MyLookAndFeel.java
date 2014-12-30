@@ -1,4 +1,4 @@
-package com.gmail.break350;
+package com.gmail.break350.laf;
 
 import javax.swing.plaf.basic.BasicLookAndFeel;
 
