@@ -1,5 +1,7 @@
 package myLaF.test.frame;
 
+import java.awt.Color;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -29,6 +31,8 @@ public class TestFrame extends JFrame {
 		content.add(label);
 		JButton button = new JButton("Button");
 		content.add(button);
+
+		content.setBackground(Color.WHITE);
 	}
 
 	public static void main(String[] args) {
