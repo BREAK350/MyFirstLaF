@@ -11,6 +11,7 @@ import javax.swing.AbstractButton;
 import javax.swing.BorderFactory;
 import javax.swing.ButtonModel;
 import javax.swing.JComponent;
+import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicButtonUI;
 
 public class MyButtonUI extends BasicButtonUI {
@@ -62,5 +63,9 @@ public class MyButtonUI extends BasicButtonUI {
 
 		// Отрисовка текста и иконки изображения
 		super.paint(g, c);
+	}
+
+	public static ComponentUI createUI(JComponent c) {
+		return new MyButtonUI();
 	}
 }
