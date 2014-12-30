@@ -27,7 +27,7 @@ public class MyLookAndFeel extends BasicLookAndFeel {
 
 	@Override
 	public boolean isSupportedLookAndFeel() {
-		return false;
+		return true;
 	}
 
 }
