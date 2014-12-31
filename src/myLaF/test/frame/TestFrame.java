@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
@@ -35,6 +36,10 @@ public class TestFrame extends JFrame {
 		JLabel label = new JLabel("label");
 		label.setFont(font);
 		content.add(label);
+
+		JTextField textField = new JTextField("Text field");
+		textField.setFont(font);
+		content.add(textField);
 
 		JButton button = new JButton("Button");
 		button.setFont(font);
