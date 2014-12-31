@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTable;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.border.EmptyBorder;
@@ -35,6 +36,10 @@ public class TestFrame extends JFrame {
 		// Helvetica, Arial,
 		// sans-serif
 		content.add(button);
+		JTable table = new JTable(new Object[][] { { "1", "Dima", "21" },
+				{ "2", "Vasya", "16" }, { "3", "Alina", "16" },
+				{ "4", "Dima", "18" } }, new Object[] { "id", "Name", "Age" });
+		content.add(table);
 
 		content.setBackground(Color.WHITE);
 	}
