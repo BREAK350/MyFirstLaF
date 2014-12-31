@@ -25,6 +25,9 @@ public class TestFrame extends JFrame {
 	}
 
 	public void initComponents() {
+		Font font = new Font("Arial", 0, 14);// "Helvetica Neue",
+		// Helvetica, Arial,
+		// sans-serif
 		JPanel content = new JPanel();
 		content.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(content);
@@ -32,9 +35,7 @@ public class TestFrame extends JFrame {
 		JLabel label = new JLabel("label");
 		content.add(label);
 		JButton button = new JButton("Button");
-		button.setFont(new Font("Arial", 0, 14));// "Helvetica Neue",
-		// Helvetica, Arial,
-		// sans-serif
+		button.setFont(font);
 		content.add(button);
 		JTable table = new JTable(new Object[][] { { "1", "Dima", "21" },
 				{ "2", "Vasya", "16" }, { "3", "Alina", "16" },
