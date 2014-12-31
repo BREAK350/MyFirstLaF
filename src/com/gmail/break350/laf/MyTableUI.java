@@ -1,6 +1,7 @@
 package com.gmail.break350.laf;
 
 import java.awt.Color;
+import java.awt.Graphics;
 
 import javax.swing.BorderFactory;
 import javax.swing.JComponent;
@@ -17,6 +18,12 @@ public class MyTableUI extends BasicTableUI {
 		table.setFocusable(true);
 		table.setBorder(BorderFactory.createEmptyBorder(4, 4, 4, 4));
 		table.setGridColor(new Color(0xe6e6e6));
+	}
+
+	@Override
+	public void paint(Graphics g, JComponent c) {
+
+		super.paint(g, c);
 	}
 
 	public static ComponentUI createUI(JComponent c) {
