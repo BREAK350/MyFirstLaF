@@ -33,13 +33,17 @@ public class TestFrame extends JFrame {
 		setContentPane(content);
 
 		JLabel label = new JLabel("label");
+		label.setFont(font);
 		content.add(label);
+
 		JButton button = new JButton("Button");
 		button.setFont(font);
 		content.add(button);
+
 		JTable table = new JTable(new Object[][] { { "1", "Dima", "21" },
 				{ "2", "Vasya", "16" }, { "3", "Alina", "16" },
 				{ "4", "Dima", "18" } }, new Object[] { "id", "Name", "Age" });
+		table.setFont(font);
 		content.add(table);
 
 		content.setBackground(Color.WHITE);
