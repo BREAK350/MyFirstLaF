@@ -73,7 +73,7 @@ public class MyLookAndFeel extends BasicLookAndFeel {
 		// table.put ( "ToolBarSeparatorUI", ... );
 		//
 		// // Table
-		// table.put ( "TableUI", ... );
+		table.put("TableUI", MyTableUI.class.getCanonicalName());
 		// table.put ( "TableHeaderUI", ... );
 		//
 		// // Chooser
