@@ -17,6 +17,7 @@ import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.basic.BasicButtonUI;
 
 public class MyButtonUI extends BasicButtonUI {
+	@Override
 	public void installUI(JComponent c) {
 		// Обязательно оставляем установку UI, реализованную в Basic UI классе
 		super.installUI(c);
@@ -33,6 +34,7 @@ public class MyButtonUI extends BasicButtonUI {
 		button.setCursor(new Cursor(Cursor.HAND_CURSOR));
 	}
 
+	@Override
 	public void paint(Graphics g, JComponent c) {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
